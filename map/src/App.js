@@ -1,6 +1,18 @@
 import React from "react"
 import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+//import Kintone from './kintone';
+
+const request = require('request');
+
+let params = {
+  url: 'https://devhwdbtb.cybozu.com/k/v1/records.json?app=1&id=1',
+  method: 'GET',
+  json: true,
+  headers: {
+    'X-Cybozu-API-Token': 'FqpBPT5bTMWgaJT6HFoHfRD7Jo5KVyO7Zd9vPnNl',
+  },
+};
 
 const data = [
   {
@@ -12,8 +24,26 @@ const data = [
     lng: 136.884844,
   },{
     lat: 35.171873,
-    lng: 136.882527,
-  }
+    lng: 136.882600,
+  },{
+    lat: 35.170680,
+    lng: 136.883333,
+  },{
+    lat: 35.170680,
+    lng: 136.884839,
+  },{
+    lat: 35.171873,
+    lng: 136.884850,
+  },{
+    lat: 35.170600,
+    lng: 136.884861,
+  },{
+    lat: 35.170700,
+    lng: 136.884857,
+  },{
+    lat: 35.170450,
+    lng: 136.884849,
+  },
 ]
 
 const MyMapComponent = compose(
@@ -42,8 +72,15 @@ export default class MyFancyComponent extends React.PureComponent {
   }
 
   componentDidMount() {
+    const kdata = request(params, function(err, resp, body) {
+      if (err) {
+        console.log('eror', err);
+        return;
+      }
+      console.log('body', body);
+    });
     data.map((item) => {
-     return console.log('i', item)
+     return console.log('i')
     })
     this.delayedShowMarker()
   }
