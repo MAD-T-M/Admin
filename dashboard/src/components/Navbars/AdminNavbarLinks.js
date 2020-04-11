@@ -78,7 +78,7 @@ export default function AdminNavbarLinks() {
         </Hidden>
       </Button>
       <div className={classes.manager}>
-        <Button
+        {/*<Button
           color={window.innerWidth > 959 ? "transparent" : "white"}
           justIcon={window.innerWidth > 959}
           simple={!(window.innerWidth > 959)}
@@ -94,7 +94,7 @@ export default function AdminNavbarLinks() {
               Notification
             </p>
           </Hidden>
-        </Button>
+        </Button>*/}
         <Poppers
           open={Boolean(openNotification)}
           anchorEl={openNotification}

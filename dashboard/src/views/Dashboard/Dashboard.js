@@ -46,7 +46,7 @@ export default function Dashboard() {
   return (
     <div>
       <GridContainer>
-        <GridItem xs={12} sm={6} md={3}>
+        {/*<GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
@@ -85,32 +85,32 @@ export default function Dashboard() {
               </div>
             </CardFooter>
           </Card>
-        </GridItem>
+        </GridItem>*/}
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
                 <Icon>info_outline</Icon>
               </CardIcon>
-              <p className={classes.cardCategory}>Fixed Issues</p>
-              <h3 className={classes.cardTitle}>75</h3>
+              <p className={classes.cardCategory}>鍵のロック数</p>
+              <h3 className={classes.cardTitle}>34</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
-                <LocalOffer />
-                Tracked from Github
+                <Update />
+                Just Updated
               </div>
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
+        <GridItem xs={12} sm={6} md={4}>
           <Card>
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
                 <Accessibility />
               </CardIcon>
-              <p className={classes.cardCategory}>Followers</p>
-              <h3 className={classes.cardTitle}>+245</h3>
+              <p className={classes.cardCategory}>今週の違反駐輪者数</p>
+              <h3 className={classes.cardTitle}>245</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
@@ -134,12 +134,12 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Daily Sales</h4>
+              <h4 className={classes.cardTitle}>今週の違反駐輪数</h4>
               <p className={classes.cardCategory}>
                 <span className={classes.successText}>
-                  <ArrowUpward className={classes.upArrowCardCategory} /> 55%
+                  <ArrowUpward className={classes.upArrowCardCategory} /> 50%
                 </span>{" "}
-                increase in today sales.
+                増加しています。
               </p>
             </CardBody>
             <CardFooter chart>
@@ -149,7 +149,7 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
+        {/*<GridItem xs={12} sm={12} md={4}>
           <Card chart>
             <CardHeader color="warning">
               <ChartistGraph
@@ -171,7 +171,7 @@ export default function Dashboard() {
               </div>
             </CardFooter>
           </Card>
-        </GridItem>
+      </GridItem>*/}
         <GridItem xs={12} sm={12} md={4}>
           <Card chart>
             <CardHeader color="danger">
@@ -184,18 +184,17 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Completed Tasks</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <h4 className={classes.cardTitle}>今日の違反者数</h4>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
-                <AccessTime /> campaign sent 2 days ago
+                <AccessTime /> updated 2 days ago
               </div>
             </CardFooter>
           </Card>
         </GridItem>
       </GridContainer>
-      <GridContainer>
+      {/*<GridContainer>
         <GridItem xs={12} sm={12} md={6}>
           <CustomTabs
             title="Tasks:"
@@ -258,8 +257,8 @@ export default function Dashboard() {
               />
             </CardBody>
           </Card>
-        </GridItem>
-      </GridContainer>
+        /GridItem>
+      </GridContainer>*/}
     </div>
   );
 }
