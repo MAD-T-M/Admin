@@ -18,14 +18,14 @@ var delays2 = 80,
 const dailySalesChart = {
   data: {
     labels: ["M", "T", "W", "T", "F", "S", "S"],
-    series: [[12, 17, 7, 17, 23, 18, 38]]
+    series: [[22, 17, 37, 17, 33, 45, 90]]
   },
   options: {
     lineSmooth: Chartist.Interpolation.cardinal({
       tension: 0
     }),
     low: 0,
-    high: 50, // MADTM: we recommend you to set the high sa the biggest value + something for a better look
+    high: 100, // MADTM: we recommend you to set the high sa the biggest value + something for a better look
     chartPadding: {
       top: 0,
       right: 0,
@@ -137,14 +137,14 @@ const emailsSubscriptionChart = {
 const completedTasksChart = {
   data: {
     labels: ["12am", "3pm", "6pm", "9pm", "12pm", "3am", "6am", "9am"],
-    series: [[230, 750, 450, 300, 280, 240, 200, 190]]
+    series: [[23, 75, 45, 30, 28, 24, 20, 19]]
   },
   options: {
     lineSmooth: Chartist.Interpolation.cardinal({
       tension: 0
     }),
     low: 0,
-    high: 1000, // MADTM: we recommend you to set the high sa the biggest value + something for a better look
+    high: 100, // MADTM: we recommend you to set the high sa the biggest value + something for a better look
     chartPadding: {
       top: 0,
       right: 0,
